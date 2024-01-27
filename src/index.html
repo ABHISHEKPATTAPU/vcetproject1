@@ -1,19 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
-  <title>Vanilla JavaScript App</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Football Fan Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        header {
+            text-align: center;
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+        }
+        h1 {
+            color: #333;
+        }
+        p {
+            color: #666;
+        }
+        #footballImage {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            display: block;
+            margin: 20px auto;
+            border-radius: 8px;
+        }
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 4px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
 </head>
-
 <body>
-  <main>
-    <h1>cricketer</h1>
-    
-    <p>virat kohli : the popular cricketer in all formats hjvjhghjgvhjgvghcghvjhgvg</p>
-  </main>
-</body>
 
+    <header>
+        <h1>Football Fan Zone</h1>
+    </header>
+
+    <img id="footballImage" src="football.jpg" alt="Football Image">
+
+    <p>Welcome to the Football Fan Page! Explore the latest news, scores, and updates about your favorite football teams.</p>
+
+    <button onclick="showFavoriteTeam()">What's your favorite team?</button>
+
+    <script>
+        function showFavoriteTeam() {
+            var favoriteTeam = prompt("Enter your favorite football team:");
+            if (favoriteTeam !== null && favoriteTeam !== "") {
+                alert("Great choice! " + favoriteTeam + " is an awesome team!");
+            } else {
+                alert("You didn't enter a team. Feel free to come back and share your favorite team!");
+            }
+        }
+    </script>
+
+</body>
 </html>
